@@ -15,14 +15,40 @@ const Recomend = () => {
       arrows: false,
       speed: 500,
       slidesToShow: 3,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+
   }
 
   return (
     <Stack className='mb-5' gap={5} style={{paddingTop:'90px', paddingBottom:"20px"}}>
         <div className="section-heading">Recommendations</div>
         <div className='service-desc d-flex justify-content-center'>
-            <p className='w-50 text-secondary'>
+            <p className='w-75 w-md-50 text-secondary'>
                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum
             </p>
         </div>

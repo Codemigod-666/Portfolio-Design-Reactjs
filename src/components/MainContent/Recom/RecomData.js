@@ -2,7 +2,7 @@ import p1 from "../../../assets/persons/p1.png"
 import p2 from "../../../assets/persons/p2.png"
 import p3 from "../../../assets/persons/p3.png"
 
-const star = [<i class="fa-solid fa-star pe-2" style={{color:" #FFB400"}}></i>]
+const star = [<i className="fa-solid fa-star pe-2" style={{color:" #FFB400"}}></i>]
 
 export const recommendData = [
     {

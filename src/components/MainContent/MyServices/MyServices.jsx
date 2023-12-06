@@ -8,7 +8,7 @@ const MyServices = () => {
         <div className='section-heading'> My Services</div>
 
         <div className='service-desc d-flex justify-content-center'>
-            <p className='w-50 text-secondary'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum Velit officia consequat duis enim velit mollit. lorem ipsum</p>
+            <p className='w-75 w-md-50 text-secondary'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum Velit officia consequat duis enim velit mollit. lorem ipsum</p>
         </div>
 
         <div className='d-flex flex-row flex-wrap justify-content-around'>

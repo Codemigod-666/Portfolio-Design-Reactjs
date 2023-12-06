@@ -5,7 +5,7 @@ import profile from '../../assets/Sidebar/Profile.jpg'
 
 const LeftSidebar = () => {
   return (
-   <Card className='left-side left-sidebar mx-0 px-4' style={{
+   <Card className='left-side left-sidebar mx-0 px-1' style={{
     paddingTop:"50px",
     paddingBottom:"30px", 
     marginBottom:"30px",
@@ -14,10 +14,10 @@ const LeftSidebar = () => {
     overflowY:"scroll",
     position:"fixed",
   }}>
-    <div className='container'>
+    <div className='container p-0'>
       <Stack gap={3}>
           <div className="p-2 image-section">
-            <img src={profile} alt='profile' />
+            <img src={profile} alt='profile' style={{borderRadius:'50%'}} />
 
             <Stack className='mt-4'>
               <div className='p-2'>
@@ -74,17 +74,6 @@ const LeftSidebar = () => {
                 </div>
                 <div>
                   <div className='d-flex justify-content-between'>
-                    <div className='text-secondary'>Marathi</div>
-                    <div className='text-secondary'>70%</div>
-                  </div>
-                  <div className='progressBar'>
-                    <div className='outer rounded border border-warning' style={{height:'6px'}}>
-                      <div className='inner bg-warning rounded' style={{height:"0.11em",margin:"1px",width:"70%"}}></div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div className='d-flex justify-content-between'>
                     <div className='text-secondary'>English</div>
                     <div className='text-secondary'>90%</div>
                   </div>
@@ -94,6 +83,18 @@ const LeftSidebar = () => {
                   </div>
                   </div>
                 </div>
+                <div>
+                  <div className='d-flex justify-content-between'>
+                    <div className='text-secondary'>Marathi</div>
+                    <div className='text-secondary'>70%</div>
+                  </div>
+                  <div className='progressBar'>
+                    <div className='outer rounded border border-warning' style={{height:'6px'}}>
+                      <div className='inner bg-warning rounded' style={{height:"0.11em",margin:"1px",width:"70%"}}></div>
+                    </div>
+                  </div>
+                </div>
+                
               </Stack>
               <hr></hr>
             </div>
@@ -195,7 +196,7 @@ const LeftSidebar = () => {
             </div>
           </div>
           <div>
-            <button className='btn btn-warning fw-bold' style={{width:"90%",height:"45px"}}> Download CV &nbsp; &nbsp; &nbsp; &nbsp; <i class="fa-solid fa-download"></i></button>
+            <button className='btn btn-warning fw-bold' style={{width:"90%",height:"45px"}}> Download CV &nbsp; &nbsp; &nbsp; &nbsp; <i className="fa-solid fa-download"></i></button>
           </div>
       </Stack>
     </div>

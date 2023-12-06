@@ -17,7 +17,7 @@ const RightSidebar = () => {
     }}>
         <div className='container'>
             <div className='mb-5 pb-5'>
-                <i class="fa-solid fa-circle-half-stroke fa-xl"></i>
+                <i className="fa-solid fa-circle-half-stroke fa-xl"></i>
             </div>
 
             <Stack style={{paddingTop:"130px"}} direction='vertical' gap={5}>

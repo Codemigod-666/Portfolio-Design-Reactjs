@@ -1,38 +1,43 @@
 import React, { useState } from 'react'
 import Stack from 'react-bootstrap/esm/Stack';
-import Tab from 'react-bootstrap/Tab';
-import Tabs from 'react-bootstrap/Tabs';
+// import Tab from 'react-bootstrap/Tab';
+// import Tabs from 'react-bootstrap/Tabs';
 import { categories, portData } from './PortData';
 
 const Portfolio = () => {
-    const [key , setKey] = useState('UI Design');
+    const [key , setKey] = useState('All Categories');
+
+    const filteredItems = key === 'All Categories'? portData : portData.filter(item => item.id === key);
     
   return (
     <Stack gap={5} style={{marginTop:"90px"}}>
         <div className='section-heading'>PortFolio</div>
         <div className='service-desc d-flex justify-content-center'>
-            <p className='w-50 text-secondary'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum Velit officia consequat duis enim velit mollit. lorem ipsum</p>
+            <p className='w-75 w-md-50 text-secondary'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum Velit officia consequat duis enim velit mollit. lorem ipsum</p>
         </div>
         <div className='d-flex justify-content-center align-items-center'>
-            <Stack direction="horizontal" gap={3}>
+            <Stack direction="horizontal" className='port-categories' gap={5}>
                 
             <div className='tab-buttons'
-            style={
-                {
-                    fontSize: '18px',
-                    fontWeight: "500",
-                    lineHeight: "123.6%",
-                    cursor: 'pointer'
+                onClick={() => setKey('All Categories')}
+                style={
+                    {   color: key === "All Categories" ? "#FFB400":"black",
+                        fontSize: '18px',
+                        fontWeight: "500",
+                        lineHeight: "123.6%",
+                        cursor: 'pointer'
+                    }
                 }
-            }
             >All Categories</div>
 
                 {
-                    categories.map((item, index) => <div key={index} 
+                    categories.map((item, index) => 
+                    <div key={index} 
                         className="tab-buttons"
                         onClick={() => setKey(item)}
                         style={
-                            {
+                            {   
+                                color: key === item ? "#FFB400":"black",
                                 fontSize: '18px',
                                 fontWeight: "500",
                                 lineHeight: "123.6%",
@@ -44,35 +49,15 @@ const Portfolio = () => {
             </Stack>
         </div>
 
-        <div className='tab-panes d-flex flex-row flex-wrap justify-content-around'>
+        <div className='tab-panes d-flex flex-row flex-wrap justify-content-around gap-4'>
                 {
-                    portData.map((item , index) => {
-                        if(item.id === key){
-                            return <img src={item.image} alt="tabs" />
-                        }
-                        else {
-                            return null;
-                        }
+                    filteredItems.map((item, index) => {
+                        return (
+                            <img src={item.image} style={{width:"280px", height:"270px"}} alt='item-data' key={index} />
+                        )
                     })
                 }
         </div>
-
-        <Tabs
-            id="controlled-tab-example"
-            activeKey={key}
-            onSelect={(k) => setKey(k)}
-            className="mb-3"
-            >
-            <Tab eventKey="home" title="Home">
-                Tab content for Home
-            </Tab>
-            <Tab eventKey="profile" title="Profile">
-                Tab content for Profile
-            </Tab>
-            <Tab eventKey="contact" title="Contact">
-                Tab content for Contact
-            </Tab>
-        </Tabs>
     </Stack>
   )
 }

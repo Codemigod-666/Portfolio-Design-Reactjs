@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div className=' home bg-white rounded ' style={{paddingTop:"150px", paddingBottom:"70px"}}>
         <div className="row">
-            <div className="col-7 text-start" style={{paddingLeft:'80px'}}>
+            <div className="col-12 col-sm-7 text-start" style={{paddingLeft:'80px'}}>
                 <div className='home-heading'>
                     I am Codemigod <br></br>
                     <span className='text-warning'> Front-end </span> Developer
@@ -15,7 +15,7 @@ const Home = () => {
                 </div>
 
                 <div>
-                    <button className="btn btn-warning px-4 py-2 fw-bolder mt-3">HIRE ME <i class="fa-solid fa-arrow-right"></i></button>
+                    <button className="btn btn-warning px-4 py-2 fw-bolder mt-3">HIRE ME <i className="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
             <div className="col-5">

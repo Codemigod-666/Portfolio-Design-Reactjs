@@ -4,6 +4,8 @@
     min-height: 100vh;
 }
 
+
+
 .container2 {
     padding: 0 3em;
 }
@@ -82,4 +84,53 @@ text-transform: capitalize;
     color:#FFB400 !important;
     font-size: 10px;
    
+}
+
+
+.form-heading {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 123.6%; /* 39.552px */
+    text-transform: capitalize;    
+}
+
+
+.price-plans{
+    display: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+
+@media screen and (min-width: 1381px) {
+    .price-plans {
+        display: block !important;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .port-categories {
+        display:flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .home {
+        background-image: none;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
 }
