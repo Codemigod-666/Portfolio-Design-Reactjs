@@ -1,38 +1,85 @@
 .App {
-  text-align: center;
+    /* background-color: rgb(221, 221, 223); */
+    background-color: #F0F0F6;
+    min-height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container2 {
+    padding: 0 3em;
+}
+.App .leftSidebar {
+    /* width: 252px; */
+    /* height: 100px; */
+    border-radius: 1.2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.leftSidebar .profile-section .profile-image img {
+    height: 150px;
+    width: 150px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.media-flex > div {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFB400;
+    padding: 5px;
+    border-radius: 50%;
 }
 
-.App-link {
-  color: #61dafb;
+.progressBar {
+    margin-top: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home {
+    background-image: url('./assets/homePage/profile-banner.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.home-heading{
+    color: var(--Black, #2B2B2B);
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 123.6%;     
+}
+
+.section-heading {
+    color: var(--Black, #2B2B2B);
+/* H2 - 32px */
+/* font-family: Inter; */
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: 123.6%; /* 39.552px */
+text-transform: capitalize;
+}
+
+.service-card {
+    width: 18em;
+    height: 14em;
+    flex-shrink: 0;    
+}
+.recom-card {
+    width: 19.5em;
+    height: 20.5em;
+    flex-shrink: 0;    
+}
+
+.right-side::-webkit-scrollbar,.left-side::-webkit-scrollbar  {
+    display: none;
+}
+
+.slick-dots {
+   transform: translateY(30px);
+}
+
+.slick-dots li.slick-active button:before {
+    color:#FFB400 !important;
+    font-size: 10px;
+   
 }
